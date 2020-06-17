@@ -43,31 +43,19 @@ public class MainActivity extends AppCompatActivity implements Scene.OnUpdateLis
     private Session session;
     private boolean shouldConfigureSession=false;
     private int isFirst=0;
-    Button button1;
-    Button button2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                isFirst = 1;
-            }
-        });
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                isFirst = 2;
-            }
-        });
+        String flag = getIntent().getExtras().getString("flag");
+        if (flag.equals("1")) {
+            isFirst = 1;
+        } else if (flag.equals(("2"))) {
+            isFirst = 2;
+        } else {
+            isFirst = 0;
+        }
 
         //View
         arView = (ArSceneView)findViewById(R.id.arView);

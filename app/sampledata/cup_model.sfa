@@ -88,7 +88,7 @@
     file: 'sampledata/cup_model.obj',
     name: 'cup_model',
     recenter: 'root',
-    scale: 0.001,
+    scale: 0.05,
   },
   version: '0.54:2',
 }
