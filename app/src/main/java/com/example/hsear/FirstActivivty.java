@@ -44,7 +44,7 @@ public class FirstActivivty extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == what_to_create) {
+        if (requestCode == caught_value) {
             if (resultCode == RESULT_OK) {
                 String myflag = data.getStringExtra(StartActivity.OBJECT);
                 if (myflag.equals("1")) {

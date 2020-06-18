@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements Scene.OnUpdateLis
         } else {
             isFirst = 0;
         }
+        if (isFirst == 0) {
+            finish();
+        }
 
         //View
         arView = (ArSceneView)findViewById(R.id.arView);
